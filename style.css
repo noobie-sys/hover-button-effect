@@ -50,10 +50,29 @@ a {
     transform: translateY(100%);
     transition: transform 300ms linear;
     z-index: 9;
+    transform-origin: left right;
 }
 
 .btn:hover:before {
     transform: translateY(0);
-    
 
+}
+
+@media (max-width : 768px) {
+    .parent-div {
+        flex-direction: column;
+    }
+    .btn::before{
+        width: 60vw;
+        height: 150px;
+        top: -10px;
+        left: -10px;
+        border-radius: 100px;
+        transform: translateX(-100%);
+        transition: transform 300ms linear;
+        z-index: 9;
+    }
+    .btn:hover:before{
+        transform: translateX(0);
+    }
 }
